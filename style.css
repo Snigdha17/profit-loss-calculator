@@ -1,7 +1,54 @@
 body {
   text-align: center;
+  background-color: #1d3557;
+  color: #f1faee;
 }
+
 label {
   display: block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: larger;
+}
+
+input {
+  background-color: transparent;
+  color: #f1faee;
+}
+
+button {
+  display: inline-block;
+  padding: 0.4rem 2rem;
+  margin: 0 0.3rem 0.3rem 0;
+  border-radius: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #f1faee;
+  text-align: center;
+  background-color: transparent;
+}
+
+button:hover {
+  color: #000000;
+  background-color: #f1faee;
+}
+
+input {
+  background-color: transparent;
+  color: #f1faee;
+  display: inline-block;
+  padding: 0.35rem 1.2rem;
+  margin: 0 0.3rem 0.3rem 0;
+  border-radius: 0.2rem;
+  font-size: larger;
+}
+
+#output {
+  color: #f1faee;
+  padding: 2rem 1.5rem;
+  margin: 0 0.3rem 0.3rem 0;
+  font-size: x-large;
+}
+
+article {
+  margin-top: 5rem;
 }

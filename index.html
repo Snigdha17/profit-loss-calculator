@@ -9,32 +9,31 @@
   </head>
   <body>
     <h1>Profit or Loss Calculator</h1>
-    <label for="initial-price"
-      >Initial Price
-      <input
-        id="initial-price"
-        placeholder="Enter Initial Price Here"
-        type="number"
-      />
-    </label>
-    <label for="quantity"
-      >Quantity of Stocks
-      <input
-        id="quantity"
-        placeholder="Enter number of stocks bought"
-        type="number"
-      />
-    </label>
-    <label for="current-price"
-      >Current Price
-      <input
-        id="current-price"
-        placeholder="Enter the current price of the stocks"
-        type="number"
-      />
-    </label>
-    <button id="submit-btn">Tell Me!</button>
-    <div id="output"></div>
+    <p>Calculator to compute profit/loss of your stocks</p>
+    <article>
+      <label for="initial-price"
+        >Initial Price:
+        <input
+          id="initial-price"
+          placeholder="Enter Initial Price"
+          type="number"
+        />
+      </label>
+      <label for="quantity"
+        >Quantity of Stocks:
+        <input id="quantity" placeholder="Enter no. of stocks" type="number" />
+      </label>
+      <label for="current-price"
+        >Current Price:
+        <input
+          id="current-price"
+          placeholder="Enter the current price"
+          type="number"
+        />
+      </label>
+      <button id="submit-btn">Tell Me!</button>
+      <div id="output"></div>
+    </article>
 
     <script src="index.js"></script>
   </body>
