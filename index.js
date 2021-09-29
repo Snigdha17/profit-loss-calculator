@@ -42,10 +42,23 @@ function calculateProfitOrLoss() {
 
 function validateInput(initialPrice, quantity, currentPrice) {
   if (initialPrice && quantity && currentPrice) {
+    if (initialPrice < 0) {
+      setOutput("Initial Price should be positive", "MISSING");
+      return false;
+    }
+    if (quantity < 0) {
+      setOutput("Quantity should be positive", "MISSING");
+      return false;
+    }
+    if (currentPrice < 0) {
+      setOutput("Current price should be positive", "MISSING");
+      return false;
+    }
     return true;
+  } else {
+    setOutput("Please enter all the fields", "MISSING");
+    return false;
   }
-  setOutput("Please enter all the fields", "MISSING");
-  return false;
 }
 
 function calculateProfit(initialPrice, currentPrice, quantity) {
