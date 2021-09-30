@@ -21,7 +21,7 @@ function calculateProfitOrLoss() {
       2
     );
     var profitPercentage = calculateProfitPercentage(
-      profit,
+      currentPrice,
       initialPrice
     ).toFixed(2);
     setOutput(
@@ -30,7 +30,10 @@ function calculateProfitOrLoss() {
     );
   } else if (currentPrice < initialPrice) {
     var loss = calculateLoss(initialPrice, currentPrice, quantity).toFixed(2);
-    var lossPercentage = calculateLossPercentage(loss, initialPrice).toFixed(2);
+    var lossPercentage = calculateLossPercentage(
+      currentPrice,
+      initialPrice
+    ).toFixed(2);
     setOutput(
       `Your loss is ${loss} and your loss percentage is ${lossPercentage}%`,
       "LOSS"
@@ -69,12 +72,14 @@ function calculateLoss(initialPrice, currentPrice, quantity) {
   return (initialPrice - currentPrice) * quantity;
 }
 
-function calculateProfitPercentage(profit, initialPrice) {
-  return (profit / initialPrice) * 100;
+function calculateProfitPercentage(currentPrice, initialPrice) {
+  var profitPerUnit = (currentPrice - initialPrice) / initialPrice;
+  return profitPerUnit * 100;
 }
 
-function calculateLossPercentage(loss, initialPrice) {
-  return (loss / initialPrice) * 100;
+function calculateLossPercentage(currentPrice, initialPrice) {
+  var lossPerUnit = (initialPrice - currentPrice) / initialPrice;
+  return lossPerUnit * 100;
 }
 
 function setOutput(text, STATUS) {
